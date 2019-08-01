@@ -113,6 +113,21 @@ function fillStylesAndColors(ctx) {
   ctx.fillRect(420, 240, 130, 50);
 }
 
+function drawImages(ctx) {
+  // DRAWING IMAGES
+  // Get a handle to the Image object
+  const image = document.getElementById('spaceship');
+
+  // Draw the image at (0, 350)
+  ctx.drawImage(image, 0, 350);
+
+  // Scale the image to half the original size
+  ctx.drawImage(image, 0, 400, 100, 25);
+
+  // Draw part of the image
+  ctx.drawImage(image, 0, 0, 60, 50, 0, 420, 60, 50);
+}
+
 function pageLoaded(id) {
   // Get a handle to the canvas object
   const canvas = document.getElementById(id);
@@ -123,4 +138,5 @@ function pageLoaded(id) {
   drawComplexShapes(ctx);
   drawText(ctx);
   fillStylesAndColors(ctx);
+  drawImages(ctx);
 }
