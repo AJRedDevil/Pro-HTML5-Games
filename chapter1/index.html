@@ -14,6 +14,23 @@
 			const context = canvas.getContext("2d");
 
 			// Our drawing code here ...
+			// FILLED RECTANGLES
+			// Draw a solid square with width and height of 100 pixels at (200, 100)
+			context.fillRect(200, 100, 100, 100);
+			// Draw a solid rectange with width of 90 pixels and height of 30 pixels at (50, 70)
+			context.fillRect(50, 70, 90, 30);
+
+			// STROKED RECTANGLES
+			// Draw a rectangular outline with width and height of 50 pixels at (110, 10)
+			context.strokeRect(110, 10, 50, 50);
+			// Draw a rectangular outline with width and height of 50 pixels at (30, 10)
+			context.strokeRect(30, 10, 50, 50);
+
+			// CLEARING RECTANGLES
+			// Clear a rectangle with width of 30 pixels and height of 20 pixels at (210, 20)
+			context.clearRect(210, 20, 30, 20);
+			// Clear a rectangle with width of 30 pixels and height of 20 pixels at (260, 20)
+			context.clearRect(260, 20, 30, 20);
 		}
 	</script>
 </head>
