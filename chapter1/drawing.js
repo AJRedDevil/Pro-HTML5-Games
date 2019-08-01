@@ -128,6 +128,28 @@ function drawImages(ctx) {
   ctx.drawImage(image, 0, 0, 60, 50, 0, 420, 60, 50);
 }
 
+function rotationAndTranslation(ctx) {
+  // ROTATION AND TRANSLATION
+  const image = document.getElementById('spaceship');
+  //Translate origin to location of object
+  ctx.translate(250, 370);
+  //Rotate about the new origin by 60 degrees
+  ctx.rotate(Math.PI / 3);
+  ctx.drawImage(image, 0, 0, 60, 50, -30, -25, 60, 50);
+  //Restore to original state by rotating and translating back
+  ctx.rotate(-Math.PI / 3);
+  ctx.translate(-240, -370);
+
+  ctx.save();
+  //Translate origin to location of object
+  ctx.translate(300, 370);
+  //Rotate about the new origin
+  ctx.rotate((3 * Math.PI) / 4);
+  ctx.drawImage(image, 0, 0, 60, 50, -30, -25, 60, 50);
+  //Restore to original state by rotating and translating back
+  ctx.restore();
+}
+
 function pageLoaded(id) {
   // Get a handle to the canvas object
   const canvas = document.getElementById(id);
@@ -139,4 +161,5 @@ function pageLoaded(id) {
   drawText(ctx);
   fillStylesAndColors(ctx);
   drawImages(ctx);
+  rotationAndTranslation(ctx);
 }
