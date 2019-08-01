@@ -81,6 +81,38 @@ function drawText(ctx) {
   ctx.strokeText('This is stroked in 16pt Arial...', 330, 80);
 }
 
+function fillStylesAndColors(ctx) {
+  // FILL STYLES AND COLORS
+  // Set fill color to red
+  ctx.fillStyle = 'red';
+  // Draw a red filled rectangle
+  ctx.fillRect(310, 160, 100, 50);
+
+  // Set stroke color to green
+  ctx.strokeStyle = 'green';
+  // Draw a green stroked rectangle
+  ctx.strokeRect(310, 240, 100, 50);
+
+  // Set fill color to yellow using rgb()
+  ctx.fillStyle = 'rgb(255, 255, 0)';
+  // Draw a yellow filled rectangle
+  ctx.fillRect(420, 160, 100, 50);
+  // Set fill color to green with an alpha of 0.6
+  ctx.fillStyle = 'rgba(0, 255, 0, 0.6)';
+  // Draw a semi-transparent green filled rectangle
+  ctx.fillRect(450, 180, 100, 50);
+
+  // TEXTURES
+  // Get a handle to the Image object
+  const fireImage = document.getElementById('fire');
+  const pattern = ctx.createPattern(fireImage, 'repeat');
+
+  // Set fill style to newly created pattern
+  ctx.fillStyle = pattern;
+  // Draw a pattern filled rectangle
+  ctx.fillRect(420, 240, 130, 50);
+}
+
 function pageLoaded(id) {
   // Get a handle to the canvas object
   const canvas = document.getElementById(id);
@@ -90,4 +122,5 @@ function pageLoaded(id) {
   drawRectangles(ctx);
   drawComplexShapes(ctx);
   drawText(ctx);
+  fillStylesAndColors(ctx);
 }
