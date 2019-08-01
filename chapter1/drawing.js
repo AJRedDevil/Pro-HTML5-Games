@@ -68,6 +68,19 @@ function drawComplexShapes(ctx) {
   ctx.stroke();
 }
 
+function drawText(ctx) {
+  // DRAWING TEXT
+  ctx.fillText('This is some text...', 330, 40);
+
+  // Modify the font
+  ctx.font = '10pt Arial';
+  ctx.fillText('This is in 10pt Arial...', 330, 60);
+
+  // Draw stroked text
+  ctx.font = '16pt Arial';
+  ctx.strokeText('This is stroked in 16pt Arial...', 330, 80);
+}
+
 function pageLoaded(id) {
   // Get a handle to the canvas object
   const canvas = document.getElementById(id);
@@ -76,4 +89,5 @@ function pageLoaded(id) {
   const ctx = canvas.getContext('2d');
   drawRectangles(ctx);
   drawComplexShapes(ctx);
+  drawText(ctx);
 }
