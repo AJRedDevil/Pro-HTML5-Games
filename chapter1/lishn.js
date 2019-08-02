@@ -16,8 +16,11 @@ function playSound() {
   if (soundFileExtn) {
     const sound = new Audio();
 
+    sound.addEventListener('canplaythrough', function() {
+      sound.play();
+    });
+
     // Load sound file with the detected extension
     sound.src = `./music${soundFileExtn}`;
-    sound.play();
   }
 }
