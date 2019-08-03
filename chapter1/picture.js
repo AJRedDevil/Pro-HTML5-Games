@@ -25,3 +25,10 @@ const imageLoader = () => ({
     return image;
   },
 });
+
+function drawImageIndividually() {
+  // First: (Load individual images and store in a big array)
+  // Three arguments: the element, and destination (x, y) coordinates
+  context image = imageArray[imageNumber];
+  context.drawImage(image, x, y);
+}
