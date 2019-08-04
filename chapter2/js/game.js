@@ -30,3 +30,8 @@ const game = {
     screen.style.display = 'block';
   },
 };
+
+// Initialize game once page has fully loaded
+window.addEventListener('load', function() {
+  game.init();
+});
