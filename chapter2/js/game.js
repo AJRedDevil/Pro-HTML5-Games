@@ -7,6 +7,7 @@ const game = {
 
     // Initialize objects
     levels.init();
+    loader.init();
 
     // Hide all game layers and display the start screen
     game.hideScreens();
