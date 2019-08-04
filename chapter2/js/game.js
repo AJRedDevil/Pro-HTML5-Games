@@ -14,7 +14,10 @@ const game = {
   hideScreens: function() {
     const screens = document.getElementsByClassName('gamelayer');
     // Iterate through all the game layers and set their display to none
-    screens.forEach(screen => (screen.style.display = 'none'));
+    for (let i = screens.length - 1; i >= 0; i--) {
+      let screen = screens[i];
+      screen.style.display = 'none';
+    }
   },
 
   hideScreen: function(id) {
