@@ -5,6 +5,9 @@ const game = {
     game.canvas = document.getElementById('gamecanvas');
     game.context = game.canvas.getContext('2d');
 
+    // Initialize objects
+    levels.init();
+
     // Hide all game layers and display the start screen
     game.hideScreens();
     game.showScreen('gamestartscreen');
