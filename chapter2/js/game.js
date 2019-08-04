@@ -32,6 +32,11 @@ const game = {
     const screen = document.getElementById(id);
     screen.style.display = 'block';
   },
+
+  showLevelScreen: function() {
+    game.hideScreens();
+    game.showScreen('levelselectscreen');
+  },
 };
 
 // Initialize game once page has fully loaded
